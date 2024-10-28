@@ -2,15 +2,14 @@ workflow:
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
 
-image: python:3.7
+image: python:3.10
 
 
 stages:
-  - build
   - test
 
 
-before-script:
+before_script:
     - pip install -r requirements.txt
 
 unittest:
