@@ -18,7 +18,7 @@ def create_app():
     def before_request_app():
         app.before_request_funcs[None].remove(before_request_app)
         db.create_all()
-        return "Добро пожаловать"
+        return "Добро пожаловать" , "100"
 
     @app.teardown_appcontext
     def shutdown_session(exception=None):
