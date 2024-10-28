@@ -9,7 +9,7 @@ stages:
   - test
 
 
-before_script:
+before-script:
     - pip install -r requirements.txt
 
 unittest:
